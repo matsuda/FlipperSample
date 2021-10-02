@@ -13,6 +13,7 @@
 		0ECEA20D270898D800E6558E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ECEA20B270898D800E6558E /* Main.storyboard */; };
 		0ECEA20F270898D900E6558E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ECEA20E270898D900E6558E /* Assets.xcassets */; };
 		0ECEA212270898D900E6558E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ECEA210270898D900E6558E /* LaunchScreen.storyboard */; };
+		C88EB73C29BBC4AFE72819ED /* Pods_FlipperSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5783E706054E08EBFB851A68 /* Pods_FlipperSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		0ECEA20E270898D900E6558E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ECEA211270898D900E6558E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0ECEA213270898D900E6558E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		195A2C79E18C848785C9B7C6 /* Pods-FlipperSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlipperSample.debug.xcconfig"; path = "Target Support Files/Pods-FlipperSample/Pods-FlipperSample.debug.xcconfig"; sourceTree = "<group>"; };
+		3CD2B253C535AC28E242FDFD /* Pods-FlipperSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlipperSample.release.xcconfig"; path = "Target Support Files/Pods-FlipperSample/Pods-FlipperSample.release.xcconfig"; sourceTree = "<group>"; };
+		5783E706054E08EBFB851A68 /* Pods_FlipperSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlipperSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C88EB73C29BBC4AFE72819ED /* Pods_FlipperSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				0ECEA204270898D800E6558E /* FlipperSample */,
 				0ECEA203270898D800E6558E /* Products */,
+				E936C59B9BF8D51F90B61BD4 /* Pods */,
+				EF79F4B952080B5584354F35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = FlipperSample;
 			sourceTree = "<group>";
 		};
+		E936C59B9BF8D51F90B61BD4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				195A2C79E18C848785C9B7C6 /* Pods-FlipperSample.debug.xcconfig */,
+				3CD2B253C535AC28E242FDFD /* Pods-FlipperSample.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EF79F4B952080B5584354F35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5783E706054E08EBFB851A68 /* Pods_FlipperSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0ECEA216270898D900E6558E /* Build configuration list for PBXNativeTarget "FlipperSample" */;
 			buildPhases = (
+				698B9D2B7980D60453A1D389 /* [CP] Check Pods Manifest.lock */,
 				0ECEA1FE270898D800E6558E /* Sources */,
 				0ECEA1FF270898D800E6558E /* Frameworks */,
 				0ECEA200270898D800E6558E /* Resources */,
+				D8795E0E682ACD65DFCDA311 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		698B9D2B7980D60453A1D389 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlipperSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8795E0E682ACD65DFCDA311 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlipperSample/Pods-FlipperSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlipperSample/Pods-FlipperSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlipperSample/Pods-FlipperSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0ECEA1FE270898D800E6558E /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		0ECEA217270898D900E6558E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 195A2C79E18C848785C9B7C6 /* Pods-FlipperSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +371,7 @@
 		};
 		0ECEA218270898D900E6558E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CD2B253C535AC28E242FDFD /* Pods-FlipperSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
