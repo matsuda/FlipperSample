@@ -15,14 +15,19 @@ target 'FlipperSample' do
   pod 'FlipperKit/FlipperKitUserDefaultsPlugin', '~>' + flipperkit_version, :configuration => 'Debug'
   # ...unfortunately at this time that means you'll need to explicitly mark
   # transitive dependencies as being for debug build only as well:
+  # pod 'Flipper-Boost-iOSX', :configuration => 'Debug'
   pod 'Flipper-DoubleConversion', :configuration => 'Debug'
-  pod 'Flipper-Folly', :configuration => 'Debug'
+  # pod 'Flipper-Fmt', :configuration => 'Debug'
+  # pod 'Flipper-Folly', :configuration => 'Debug'
+  pod 'Flipper-Folly', '2.6.7', :configuration => 'Debug'
   pod 'Flipper-Glog', :configuration => 'Debug'
   pod 'Flipper-PeerTalk', :configuration => 'Debug'
+  # pod 'Flipper-RSocket', :configuration => 'Debug'
   # pod 'CocoaLibEvent', :configuration => 'Debug'
   pod 'OpenSSL-Universal', :configuration => 'Debug'
   pod 'CocoaAsyncSocket', :configuration => 'Debug'
   # pod 'libevent', :configuration => 'Debug'
+  # pod 'SocketRocket', :configuration => 'Debug'
   # pod 'ComponentKit', '~> 0.31'
 end
 
